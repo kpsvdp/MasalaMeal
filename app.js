@@ -1,17 +1,3 @@
-function loadMenu() {
-  const tag = document.getElementById('menuData');
-  if (tag) {
-    try {
-      const data = JSON.parse(tag.textContent);
-      return Promise.resolve(data);
-    } catch (e) {
-      console.error('Failed to parse embedded menuData:', e);
-    }
-  }
-  // Fallback (kept for safety if you ever remove the embedded data)
-  return fetch('menu.json').then(r => r.json());
-}
-
 
 let FILTER_VEG = 'all'; // 'all' | 'veg' | 'nonveg'
 let MAX_SPICE = 3; // 0..3
@@ -367,7 +353,6 @@ function renderSections() {
   wrap.innerHTML = '';
 
   function buildSection(title, items, id) {
-    if(id) { section.id = id; }
     if (!items.length) return;
     const section = document.createElement('section');
     if (id) section.id = id;
