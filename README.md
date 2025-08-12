@@ -1,35 +1,30 @@
+# MasalaMeal — South Indian Menu & Online Ordering
 
-# MasalaMitra — Indian Restaurant Frontend (React + Tailwind)
-
-Responsive menu and online ordering demo: search, categories, veg-only toggle, spice indicators, cart with promo code, delivery/pickup, INR totals.
-
-## Quick start
-```bash
-npm install
-npm run dev
-```
-
-## Build for production
-```bash
-npm run build
-npm run preview
-```
-
-## Deploy to GitHub Pages
-1. Commit and push to GitHub.
-2. Run:
-   ```bash
-   npm run build
-   npm run deploy
-   ```
-3. In your repo, go to **Settings → Pages** and ensure it points to the `gh-pages` branch.
+A lightweight full‑stack web app for a South Indian restaurant, featuring a modern UI, online cart, and order API.
 
 ## Tech
-- React + Vite
-- Tailwind CSS
-- lucide-react icons
+- **Frontend:** HTML + Tailwind (CDN) + Vanilla JS
+- **Backend:** Node.js + Express
+- **Data:** JSON menu file (easy to edit)
+- **Deploy:** Any Node host (Render, Railway, Vercel)
 
-> Demo only — no backend. Orders show an alert.
+## Run locally
+```bash
+npm install
+npm run start
+# open http://localhost:8080
+```
 
+## API
+- `GET /api/menu` — returns menu JSON
+- `POST /api/order` — { items:[{id, size?, qty}], customer:{name, phone, address, notes} }
+  - Responds with order object and computed totals.
 
-Deployed via GitHub Actions (Pages). Ensure Settings → Pages → Source = GitHub Actions.
+> Note: Orders are stored in memory for demo. Use a real DB (e.g., MongoDB) for production.
+
+## GitHub Pages?
+GitHub Pages can't run a Node backend. To host the backend:
+- Use a Node host (Render/Railway/Vercel). Then set `API_BASE` in `public/app.js` if you split frontend & backend.
+- Or deploy the whole app as a single Node service.
+
+Enjoy! 🍛

@@ -1,0 +1,17 @@
+{
+  "name": "masalameal",
+  "version": "1.0.0",
+  "description": "MasalaMeal - South Indian restaurant menu & online ordering (full-stack Node/Express + vanilla JS).",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "uuid": "^9.0.1"
+  }
+}
