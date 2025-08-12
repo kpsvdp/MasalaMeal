@@ -1,3 +1,17 @@
+function loadMenu() {
+  const tag = document.getElementById('menuData');
+  if (tag) {
+    try {
+      const data = JSON.parse(tag.textContent);
+      return Promise.resolve(data);
+    } catch (e) {
+      console.error('Failed to parse embedded menuData:', e);
+    }
+  }
+  // Fallback (kept for safety if you ever remove the embedded data)
+  return fetch('menu.json').then(r => r.json());
+}
+
 
 let FILTER_VEG = 'all'; // 'all' | 'veg' | 'nonveg'
 let MAX_SPICE = 3; // 0..3
@@ -98,6 +112,7 @@ function buildSideNav(categories) {
   const entries = Object.entries(categories);
   entries.forEach(([cat, items], i) => {
     const section = document.createElement('section');
+    if (id) section.id = id;
     section.id = `cat-${i}`;
     section.innerHTML = `<h3 class="section-title">${cat}${priceRangeFor(items, MENU?.restaurant?.currency || '£')}</h3>`;
     // Compact list: Name • Calories • Price
@@ -343,4 +358,103 @@ function minPriceOf(m){
     return Math.min(...vals);
   }
   return m.price || 0;
+}
+
+
+function renderSections() {
+  buildSideNavCustom();
+  const wrap = document.getElementById('menuSections');
+  wrap.innerHTML = '';
+
+  function buildSection(title, items, id) {
+    if(id) { section.id = id; }
+    if (!items.length) return;
+    const section = document.createElement('section');
+    if (id) section.id = id;
+    section.innerHTML = `<h3 class="section-title">${title}</h3>`;
+    const list = document.createElement('div');
+    list.className = 'grid sm:grid-cols-2 xl:grid-cols-3 gap-4 section-wrap';
+
+    items.forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      const badges = [];
+      if (m.bestseller) badges.push('<span class="badge border-amber-300">Bestseller</span>');
+      if (m.spicy) badges.push('<span class="badge border-red-300">Spicy</span>');
+      if (m.veg) badges.push('<span class="badge border-green-300">Veg</span>');
+      if (m.gluten_free) badges.push('<span class="badge border-sky-300">GF</span>');
+
+      let priceBlock = '';
+      if (m.sizes) {
+        const opts = Object.entries(m.sizes)
+          .map(([sz, p]) => `<option value="${sz}" ${m.defaultSize===sz?'selected':''}>${sz} — £${p.toFixed(2)}</option>`)
+          .join('');
+        priceBlock = `<label class="text-xs text-stone-600">Choose</label>
+                      <select class="size-select" data-id="${m.id}">${opts}</select>`;
+      } else {
+        priceBlock = `<div class="price">£${m.price.toFixed(2)}</div>`;
+      }
+
+      card.innerHTML = `
+        <div class="flex items-start gap-3">
+          <div class="grow">
+            <h4>${m.name}</h4>
+            <p class="text-sm text-stone-600">${m.description}</p>
+            <div class="mt-2 flex gap-2">${badges.join('')}</div>
+            <div class="mt-2">${priceBlock}</div>
+            <div class="mt-2 qty">
+              <button class="dec" aria-label="Decrease">-</button>
+              <span class="q">1</span>
+              <button class="inc" aria-label="Increase">+</button>
+            </div>
+            <button class="add-btn" data-id="${m.id}">Add to Cart</button>
+          </div>
+        </div>
+      `;
+
+      const qty = card.querySelector('.q');
+      card.querySelector('.inc').onclick = () => qty.textContent = +qty.textContent + 1;
+      card.querySelector('.dec').onclick = () => qty.textContent = Math.max(1, +qty.textContent - 1);
+      card.querySelector('.add-btn').onclick = () => {
+        const sizeSel = card.querySelector('.size-select');
+        const size = sizeSel ? sizeSel.value : null;
+        addToCart(m.id, size, +qty.textContent);
+      };
+
+      list.appendChild(card);
+    });
+
+    section.appendChild(list);
+    wrap.appendChild(section);
+  }
+
+  const allItems = Object.entries(MENU.categories)
+    .flatMap(([cat, items]) => items.map(it => ({ ...it, category: cat })));
+
+  const desserts = allItems.filter(m => m.category === 'Sweets & Desserts');
+  const vegItems = allItems.filter(m => m.veg && m.category !== 'Sweets & Desserts');
+  const nonVegItems = allItems.filter(m => !m.veg);
+
+  buildSection('🥗 Veg', vegItems, 'veg-section');
+  buildSection('🍗 Non-Veg', nonVegItems, 'nonveg-section');
+  buildSection('🍮 Desserts', desserts, 'desserts-section');
+}
+
+
+function buildSideNavCustom() {
+  const nav = document.getElementById('sideNav');
+  if (!nav) return;
+  nav.innerHTML = '';
+  const sections = [
+    { id: 'veg-section', name: '🥗 Veg' },
+    { id: 'nonveg-section', name: '🍗 Non-Veg' },
+    { id: 'desserts-section', name: '🍮 Desserts' }
+  ];
+  sections.forEach(sec => {
+    const a = document.createElement('a');
+    a.href = `#${sec.id}`;
+    a.className = 'block rounded-lg px-3 py-2 text-sm hover:bg-stone-100';
+    a.textContent = sec.name;
+    nav.appendChild(a);
+  });
 }
