@@ -30,3 +30,6 @@ npm run preview
 - lucide-react icons
 
 > Demo only — no backend. Orders show an alert.
+
+
+Deployed via GitHub Actions (Pages). Ensure Settings → Pages → Source = GitHub Actions.
