@@ -1,15 +1,87 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MasalaMitra — Indian Restaurant</title>
-    <meta name="description" content="Indian restaurant menu and online orders — React + Tailwind" />
-    <link rel="icon" href="/favicon.ico">
-  </head>
-  <body class="bg-orange-50">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masalameal — Indian Restaurant & Online Orders</title>
+  <meta name="description" content="Masalameal: authentic Indian flavours. Browse menu and place your order online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <h1>Masalameal</h1>
+      </div>
+      <nav class="navlinks">
+        <a href="#menu" class="active">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge">Now serving — Free delivery over £20</span>
+        <h2>Spice-forward Indian comfort food, made fresh.</h2>
+        <p>From street-style chaats to slow-cooked biryanis, Masalameal brings homely flavours without the wait.</p>
+        <div class="cta">
+          <button class="btn primary" onclick="goToMenu()">Browse Menu</button>
+          <a class="btn" href="#order">Go to Cart</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/img/dish4.jpg" alt="Hyderabadi Biryani" style="width:100%; border-radius:14px">
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <h2 style="margin:16px 0 10px">Popular Dishes</h2>
+      <div id="menu-grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section id="order" class="split">
+      <div class="panel">
+        <h4>Your Order</h4>
+        <div id="cart-empty" class="cart-empty">Your cart is empty. Add some dishes from the menu.</div>
+        <div id="cart-list" class="list"></div>
+        <div id="cart-total" class="total" style="display:none">
+          <span>Total</span> <strong>£0.00</strong>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <button class="btn success">Checkout (demo)</button>
+          <button class="btn" onclick="location.hash='#menu'">Add more</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h4>Why Masalameal?</h4>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <li>Authentic recipes & fresh spices</li>
+          <li>Vegetarian & non-veg specials daily</li>
+          <li>Fast pickup and local delivery</li>
+          <li>Transparent pricing (incl. VAT)</li>
+        </ul>
+        <hr style="border:0;border-top:1px solid #1f2937;margin:16px 0">
+        <h4 id="about">About</h4>
+        <p class="muted">Masalameal is a modern Indian kitchen. This is a demo front-end for menu browsing and ordering UI, suitable for GitHub Pages hosting.</p>
+        <h4 id="contact" style="margin-top:16px">Contact</h4>
+        <p class="muted">📍 21 Spice Street, London<br>📞 020 1234 5678<br>✉️ hello@masalameal.example</p>
+      </div>
+    </section>
+
+    <p class="footer">© <span id="y"></span> Masalameal. All rights reserved.</p>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
