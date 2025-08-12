@@ -1,0 +1,698 @@
+{
+  "restaurant": {
+    "name": "MasalaMeal",
+    "tagline": "Authentic South Indian Flavours \u2022 Fast, Fresh, Friendly",
+    "currency": "\u00a3"
+  },
+  "categories": {
+    "Breakfast & Tiffin": [
+      {
+        "id": "idli_plain",
+        "name": "Idli (2 pcs)",
+        "description": "Steamed rice cakes served with sambar & coconut chutney.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "price": 3.5,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/idli_plain.svg",
+        "calories": 220
+      },
+      {
+        "id": "idli_ghee",
+        "name": "Ghee Idli",
+        "description": "Soft idlis drizzled with ghee; sambar & chutneys.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 4.2,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/idli_ghee.svg",
+        "calories": 280
+      },
+      {
+        "id": "medu_vada",
+        "name": "Medu Vada (2 pcs)",
+        "description": "Crispy urad dal fritters with sambar & chutneys.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "price": 3.9,
+        "gluten_free": true,
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/medu_vada.svg",
+        "calories": 320
+      },
+      {
+        "id": "rava_upma",
+        "name": "Rava Upma",
+        "description": "Semolina upma tempered with mustard & curry leaves.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 4.5,
+        "spice": 0,
+        "allergens": [
+          "gluten"
+        ],
+        "image": "img/rava_upma.svg",
+        "calories": 260
+      },
+      {
+        "id": "pongal",
+        "name": "Ven Pongal",
+        "description": "Savory moong dal rice porridge, pepper & ghee.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 4.9,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/pongal.svg",
+        "calories": 350
+      },
+      {
+        "id": "kesari",
+        "name": "Kesari Bath",
+        "description": "Saffron semolina halwa.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 3.8,
+        "spice": 0,
+        "allergens": [
+          "dairy",
+          "nuts?",
+          "gluten?"
+        ],
+        "image": "img/kesari.svg",
+        "calories": 300
+      },
+      {
+        "id": "uthappam_mixed",
+        "name": "Mixed Veg Uthappam",
+        "description": "Thick dosa topped with onions, tomatoes & chilies.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "sizes": {
+          "Regular": 5.5,
+          "Large": 7.0
+        },
+        "defaultSize": "Regular",
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/uthappam_mixed.svg",
+        "calories": 320
+      }
+    ],
+    "Dosa Corner": [
+      {
+        "id": "dosa_plain",
+        "name": "Plain Dosa",
+        "description": "Crisp fermented rice-lentil crepe.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "sizes": {
+          "Regular": 5.0,
+          "Ghee": 6.0
+        },
+        "defaultSize": "Regular",
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/dosa_plain.svg",
+        "calories": 240
+      },
+      {
+        "id": "dosa_masala",
+        "name": "Masala Dosa",
+        "description": "Stuffed with spiced potato masala.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "sizes": {
+          "Regular": 6.5,
+          "Ghee": 7.5,
+          "Cheese": 7.9
+        },
+        "defaultSize": "Regular",
+        "gluten_free": true,
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/dosa_masala.svg",
+        "calories": 420
+      },
+      {
+        "id": "dosa_mysore",
+        "name": "Mysore Masala Dosa",
+        "description": "Chili-onion chutney smear + potato masala.",
+        "veg": true,
+        "spicy": true,
+        "bestseller": false,
+        "sizes": {
+          "Regular": 7.0,
+          "Ghee": 8.0
+        },
+        "defaultSize": "Regular",
+        "gluten_free": true,
+        "spice": 2,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/dosa_mysore.svg",
+        "calories": 460
+      },
+      {
+        "id": "dosa_rava",
+        "name": "Rava Dosa",
+        "description": "Lacy semolina dosa with black pepper & cumin.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "sizes": {
+          "Plain": 6.0,
+          "Onion": 6.8
+        },
+        "defaultSize": "Plain",
+        "spice": 0,
+        "allergens": [
+          "gluten"
+        ],
+        "image": "img/dosa_rava.svg",
+        "calories": 300
+      },
+      {
+        "id": "dosa_podi",
+        "name": "Podi Dosa",
+        "description": "Gunpowder-spiced podi & ghee.",
+        "veg": true,
+        "spicy": true,
+        "bestseller": false,
+        "sizes": {
+          "Regular": 6.8,
+          "Ghee": 7.8
+        },
+        "defaultSize": "Regular",
+        "gluten_free": true,
+        "spice": 2,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/dosa_podi.svg",
+        "calories": 430
+      },
+      {
+        "id": "dosa_set",
+        "name": "Set Dosa (3)",
+        "description": "Soft, thick dosas served as a set.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 6.5,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/dosa_set.svg",
+        "calories": 380
+      },
+      {
+        "id": "dosa_neer",
+        "name": "Neer Dosa",
+        "description": "Delicate Mangalorean rice crepes.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 6.2,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/dosa_neer.svg",
+        "calories": 220
+      }
+    ],
+    "Rice & Meals": [
+      {
+        "id": "meals_south",
+        "name": "South Indian Meals",
+        "description": "Rice, sambar, rasam, poriyal, kootu, curd, papad & pickle.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "sizes": {
+          "Mini": 7.5,
+          "Regular": 9.5
+        },
+        "defaultSize": "Regular",
+        "spice": 1,
+        "allergens": [
+          "dairy",
+          "nuts?"
+        ],
+        "image": "img/meals_south.svg",
+        "calories": 700
+      },
+      {
+        "id": "curd_rice",
+        "name": "Curd Rice",
+        "description": "Comforting tempered yogurt rice.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 5.5,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/curd_rice.svg",
+        "calories": 360
+      },
+      {
+        "id": "lemon_rice",
+        "name": "Lemon Rice",
+        "description": "Zesty lemon-tempered rice with peanuts.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 5.9,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/lemon_rice.svg",
+        "calories": 420
+      },
+      {
+        "id": "tam_rice",
+        "name": "Tamarind Rice",
+        "description": "Tangy puliyodarai with sesame & peanuts.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 6.2,
+        "gluten_free": true,
+        "spice": 1,
+        "allergens": [
+          "nuts?"
+        ],
+        "image": "img/tam_rice.svg",
+        "calories": 430
+      },
+      {
+        "id": "bisi_bele_bath",
+        "name": "Bisi Bele Bath",
+        "description": "Karnataka-style lentil-rice stew.",
+        "veg": true,
+        "spicy": true,
+        "bestseller": false,
+        "price": 7.2,
+        "gluten_free": true,
+        "spice": 2,
+        "allergens": [
+          "nuts?"
+        ],
+        "image": "img/bisi_bele_bath.svg",
+        "calories": 520
+      },
+      {
+        "id": "sambar_rice",
+        "name": "Sambar Rice",
+        "description": "Veg & lentil stew over rice.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 6.8,
+        "gluten_free": true,
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/sambar_rice.svg",
+        "calories": 480
+      },
+      {
+        "id": "chicken_biryani",
+        "name": "Hyderabadi Chicken Biryani",
+        "description": "Aromatic layered basmati & chicken.",
+        "veg": false,
+        "spicy": false,
+        "bestseller": true,
+        "sizes": {
+          "Single": 9.9,
+          "Family": 18.0
+        },
+        "defaultSize": "Single",
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/chicken_biryani.svg",
+        "calories": 780
+      },
+      {
+        "id": "mutton_biryani",
+        "name": "Mutton Biryani",
+        "description": "Dum-cooked tender mutton biryani.",
+        "veg": false,
+        "spicy": false,
+        "bestseller": false,
+        "sizes": {
+          "Single": 12.5,
+          "Family": 22.0
+        },
+        "defaultSize": "Single",
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/mutton_biryani.svg",
+        "calories": 860
+      }
+    ],
+    "Curries & Sides": [
+      {
+        "id": "chettinad_chicken",
+        "name": "Chettinad Chicken Curry",
+        "description": "Roasted spice blend, coconut, black pepper heat.",
+        "veg": false,
+        "spicy": true,
+        "bestseller": false,
+        "price": 9.5,
+        "spice": 3,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/chettinad_chicken.svg",
+        "calories": 520
+      },
+      {
+        "id": "fish_curry",
+        "name": "Mangalorean Fish Curry",
+        "description": "Coconut & red chili base, tangy.",
+        "veg": false,
+        "spicy": true,
+        "bestseller": false,
+        "price": 10.5,
+        "spice": 2,
+        "allergens": [
+          "fish"
+        ],
+        "image": "img/fish_curry.svg",
+        "calories": 480
+      },
+      {
+        "id": "veg_kurma",
+        "name": "Vegetable Kurma",
+        "description": "Coconut-cashew based mixed veg curry.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 7.5,
+        "spice": 1,
+        "allergens": [
+          "nuts?",
+          "dairy"
+        ],
+        "image": "img/veg_kurma.svg",
+        "calories": 420
+      },
+      {
+        "id": "paneer_chettinad",
+        "name": "Paneer Chettinad",
+        "description": "Spicy Chettinad paneer gravy.",
+        "veg": true,
+        "spicy": true,
+        "bestseller": false,
+        "price": 8.5,
+        "spice": 2,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/paneer_chettinad.svg",
+        "calories": 540
+      },
+      {
+        "id": "poriyal",
+        "name": "Seasonal Veg Poriyal",
+        "description": "Stir-fried veg, mustard, coconut.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 5.2,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/poriyal.svg",
+        "calories": 180
+      },
+      {
+        "id": "rasam",
+        "name": "Tomato Pepper Rasam",
+        "description": "Peppery, tangy broth.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 4.0,
+        "gluten_free": true,
+        "spice": 2,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/rasam.svg",
+        "calories": 60
+      },
+      {
+        "id": "sambar",
+        "name": "Sambar",
+        "description": "Lentil & veg stew.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 4.5,
+        "gluten_free": true,
+        "spice": 1,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/sambar.svg",
+        "calories": 120
+      }
+    ],
+    "Chutneys & Extras": [
+      {
+        "id": "chutney_trio",
+        "name": "Chutney Trio",
+        "description": "Coconut, tomato, mint-coriander.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 2.5,
+        "gluten_free": true,
+        "spice": 1,
+        "allergens": [
+          "nuts?"
+        ],
+        "image": "img/chutney_trio.svg",
+        "calories": 90
+      },
+      {
+        "id": "curd",
+        "name": "Set Curd",
+        "description": "House-set yogurt.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 2.0,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/curd.svg",
+        "calories": 100
+      },
+      {
+        "id": "papad",
+        "name": "Papad (2)",
+        "description": "Fried papadums.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 1.8,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/papad.svg",
+        "calories": 80
+      },
+      {
+        "id": "ghee",
+        "name": "Ghee Portion",
+        "description": "Golden clarified butter.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 1.5,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/ghee.svg",
+        "calories": 120
+      }
+    ],
+    "Beverages": [
+      {
+        "id": "filter_coffee",
+        "name": "Filter Coffee",
+        "description": "Classic South Indian decoction coffee.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "sizes": {
+          "Small": 2.2,
+          "Regular": 2.8,
+          "Large": 3.2
+        },
+        "defaultSize": "Regular",
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/filter_coffee.svg",
+        "calories": 90
+      },
+      {
+        "id": "masala_chai",
+        "name": "Masala Chai",
+        "description": "Spiced milk tea.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "sizes": {
+          "Small": 2.0,
+          "Regular": 2.6,
+          "Large": 3.0
+        },
+        "defaultSize": "Regular",
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/masala_chai.svg",
+        "calories": 110
+      },
+      {
+        "id": "buttermilk",
+        "name": "Masala Buttermilk",
+        "description": "Cooling spiced chaas.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 2.2,
+        "gluten_free": true,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/buttermilk.svg",
+        "calories": 60
+      },
+      {
+        "id": "rose_milk",
+        "name": "Rose Milk",
+        "description": "Sweet chilled rose milk.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 2.8,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/rose_milk.svg",
+        "calories": 180
+      }
+    ],
+    "Sweets & Desserts": [
+      {
+        "id": "payasam",
+        "name": "Payasam (Semiya)",
+        "description": "Vermicelli pudding with nuts.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 3.8,
+        "spice": 0,
+        "allergens": [
+          "dairy",
+          "nuts?"
+        ],
+        "image": "img/payasam.svg",
+        "calories": 280
+      },
+      {
+        "id": "uniyappam",
+        "name": "Unniyappam",
+        "description": "Jaggery-rice fritters (Kerala).",
+        "veg": true,
+        "spicy": false,
+        "bestseller": false,
+        "price": 3.8,
+        "spice": 0,
+        "allergens": [
+          "none"
+        ],
+        "image": "img/uniyappam.svg",
+        "calories": 260
+      },
+      {
+        "id": "mysore_pak",
+        "name": "Mysore Pak",
+        "description": "Gram flour, ghee & sugar fudge.",
+        "veg": true,
+        "spicy": false,
+        "bestseller": true,
+        "price": 3.6,
+        "spice": 0,
+        "allergens": [
+          "dairy"
+        ],
+        "image": "img/mysore_pak.svg",
+        "calories": 430
+      }
+    ]
+  }
+}
