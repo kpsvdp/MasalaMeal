@@ -1,0 +1,526 @@
+{
+  "currency": "GBP",
+  "items": [
+    {
+      "id": "idli-2-pcs",
+      "name": "Idli (2 pcs)",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 3.5,
+      "description": "Steamed rice cakes served with sambar & coconut chutney.",
+      "tags": [
+        "bestseller",
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/idli_plain.jpg"
+    },
+    {
+      "id": "ghee-idli",
+      "name": "Ghee Idli",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 4.2,
+      "description": "Soft idlis drizzled with ghee; sambar & chutneys.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/idli_ghee.jpg"
+    },
+    {
+      "id": "medu-vada-2-pcs",
+      "name": "Medu Vada (2 pcs)",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 3.9,
+      "description": "Crispy urad dal fritters with sambar & chutneys.",
+      "tags": [
+        "bestseller",
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/medu_vada.jpg"
+    },
+    {
+      "id": "rava-upma",
+      "name": "Rava Upma",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 4.5,
+      "description": "Semolina upma tempered with mustard & curry leaves.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/rava_upma.jpg"
+    },
+    {
+      "id": "ven-pongal",
+      "name": "Ven Pongal",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 4.9,
+      "description": "Savory moong dal rice porridge, pepper & ghee.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/pongal.jpg"
+    },
+    {
+      "id": "kesari-bath",
+      "name": "Kesari Bath",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 3.8,
+      "description": "Saffron semolina halwa.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/kesari.jpg"
+    },
+    {
+      "id": "mixed-veg-uthappam",
+      "name": "Mixed Veg Uthappam",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 5.5,
+      "description": "Thick dosa topped with onions, tomatoes & chilies.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/uthappam_mixed.jpg"
+    },
+    {
+      "id": "plain-dosa",
+      "name": "Plain Dosa",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 5.0,
+      "description": "Crisp fermented rice-lentil crepe.",
+      "tags": [
+        "bestseller",
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_plain.jpg"
+    },
+    {
+      "id": "masala-dosa",
+      "name": "Masala Dosa",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.5,
+      "description": "Stuffed with spiced potato masala.",
+      "tags": [
+        "bestseller",
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_masala.jpg"
+    },
+    {
+      "id": "mysore-masala-dosa",
+      "name": "Mysore Masala Dosa",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 7.0,
+      "description": "Chili-onion chutney smear + potato masala.",
+      "tags": [
+        "gluten_free",
+        "spicy",
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_mysore.jpg"
+    },
+    {
+      "id": "rava-dosa",
+      "name": "Rava Dosa",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.0,
+      "description": "Lacy semolina dosa with black pepper & cumin.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_rava.jpg"
+    },
+    {
+      "id": "podi-dosa",
+      "name": "Podi Dosa",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.8,
+      "description": "Gunpowder-spiced podi & ghee.",
+      "tags": [
+        "gluten_free",
+        "spicy",
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_podi.jpg"
+    },
+    {
+      "id": "set-dosa-3",
+      "name": "Set Dosa (3)",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.5,
+      "description": "Soft, thick dosas served as a set.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_set.jpg"
+    },
+    {
+      "id": "neer-dosa",
+      "name": "Neer Dosa",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.2,
+      "description": "Delicate Mangalorean rice crepes.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/dosa_neer.jpg"
+    },
+    {
+      "id": "south-indian-meals",
+      "name": "South Indian Meals",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 9.5,
+      "description": "Rice, sambar, rasam, poriyal, kootu, curd, papad & pickle.",
+      "tags": [
+        "bestseller",
+        "veg"
+      ],
+      "image": "assets/img/menu/meals_south.jpg"
+    },
+    {
+      "id": "curd-rice",
+      "name": "Curd Rice",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 5.5,
+      "description": "Comforting tempered yogurt rice.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/curd_rice.jpg"
+    },
+    {
+      "id": "lemon-rice",
+      "name": "Lemon Rice",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 5.9,
+      "description": "Zesty lemon-tempered rice with peanuts.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/lemon_rice.jpg"
+    },
+    {
+      "id": "tamarind-rice",
+      "name": "Tamarind Rice",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.2,
+      "description": "Tangy puliyodarai with sesame & peanuts.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/tam_rice.jpg"
+    },
+    {
+      "id": "bisi-bele-bath",
+      "name": "Bisi Bele Bath",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 7.2,
+      "description": "Karnataka-style lentil-rice stew.",
+      "tags": [
+        "gluten_free",
+        "spicy",
+        "veg"
+      ],
+      "image": "assets/img/menu/bisi_bele_bath.jpg"
+    },
+    {
+      "id": "sambar-rice",
+      "name": "Sambar Rice",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 6.8,
+      "description": "Veg & lentil stew over rice.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/sambar_rice.jpg"
+    },
+    {
+      "id": "vegetable-kurma",
+      "name": "Vegetable Kurma",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 7.5,
+      "description": "Coconut-cashew based mixed veg curry.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/veg_kurma.jpg"
+    },
+    {
+      "id": "paneer-chettinad",
+      "name": "Paneer Chettinad",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 8.5,
+      "description": "Spicy Chettinad paneer gravy.",
+      "tags": [
+        "spicy",
+        "veg"
+      ],
+      "image": "assets/img/menu/paneer_chettinad.jpg"
+    },
+    {
+      "id": "seasonal-veg-poriyal",
+      "name": "Seasonal Veg Poriyal",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 5.2,
+      "description": "Stir-fried veg, mustard, coconut.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/poriyal.jpg"
+    },
+    {
+      "id": "tomato-pepper-rasam",
+      "name": "Tomato Pepper Rasam",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 4.0,
+      "description": "Peppery, tangy broth.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/rasam.jpg"
+    },
+    {
+      "id": "sambar",
+      "name": "Sambar",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 4.5,
+      "description": "Lentil & veg stew.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/sambar.jpg"
+    },
+    {
+      "id": "chutney-trio",
+      "name": "Chutney Trio",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 2.5,
+      "description": "Coconut, tomato, mint-coriander.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/chutney_trio.jpg"
+    },
+    {
+      "id": "set-curd",
+      "name": "Set Curd",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 2.0,
+      "description": "House-set yogurt.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/curd.jpg"
+    },
+    {
+      "id": "papad-2",
+      "name": "Papad (2)",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 1.8,
+      "description": "Fried papadums.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/papad.jpg"
+    },
+    {
+      "id": "ghee-portion",
+      "name": "Ghee Portion",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 1.5,
+      "description": "Golden clarified butter.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/ghee.jpg"
+    },
+    {
+      "id": "filter-coffee",
+      "name": "Filter Coffee",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 2.8,
+      "description": "Classic South Indian decoction coffee.",
+      "tags": [
+        "bestseller",
+        "veg"
+      ],
+      "image": "assets/img/menu/filter_coffee.jpg"
+    },
+    {
+      "id": "masala-chai",
+      "name": "Masala Chai",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 2.6,
+      "description": "Spiced milk tea.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/masala_chai.jpg"
+    },
+    {
+      "id": "masala-buttermilk",
+      "name": "Masala Buttermilk",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 2.2,
+      "description": "Cooling spiced chaas.",
+      "tags": [
+        "gluten_free",
+        "veg"
+      ],
+      "image": "assets/img/menu/buttermilk.jpg"
+    },
+    {
+      "id": "rose-milk",
+      "name": "Rose Milk",
+      "category": "Veg",
+      "dietary": "veg",
+      "price_gbp": 2.8,
+      "description": "Sweet chilled rose milk.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/rose_milk.jpg"
+    },
+    {
+      "id": "hyderabadi-chicken-biryani",
+      "name": "Hyderabadi Chicken Biryani",
+      "category": "Non-Veg",
+      "dietary": "veg",
+      "price_gbp": 9.9,
+      "description": "Aromatic layered basmati & chicken.",
+      "tags": [
+        "bestseller",
+        "nonveg",
+        "veg"
+      ],
+      "image": "assets/img/menu/chicken_biryani.jpg"
+    },
+    {
+      "id": "mutton-biryani",
+      "name": "Mutton Biryani",
+      "category": "Non-Veg",
+      "dietary": "veg",
+      "price_gbp": 12.5,
+      "description": "Dum-cooked tender mutton biryani.",
+      "tags": [
+        "nonveg",
+        "veg"
+      ],
+      "image": "assets/img/menu/mutton_biryani.jpg"
+    },
+    {
+      "id": "chettinad-chicken-curry",
+      "name": "Chettinad Chicken Curry",
+      "category": "Non-Veg",
+      "dietary": "veg",
+      "price_gbp": 9.5,
+      "description": "Roasted spice blend, coconut, black pepper heat.",
+      "tags": [
+        "nonveg",
+        "spicy",
+        "veg"
+      ],
+      "image": "assets/img/menu/chettinad_chicken.jpg"
+    },
+    {
+      "id": "mangalorean-fish-curry",
+      "name": "Mangalorean Fish Curry",
+      "category": "Non-Veg",
+      "dietary": "veg",
+      "price_gbp": 10.5,
+      "description": "Coconut & red chili base, tangy.",
+      "tags": [
+        "nonveg",
+        "spicy",
+        "veg"
+      ],
+      "image": "assets/img/menu/fish_curry.jpg"
+    },
+    {
+      "id": "payasam-semiya",
+      "name": "Payasam (Semiya)",
+      "category": "Desserts",
+      "dietary": "veg",
+      "price_gbp": 3.8,
+      "description": "Vermicelli pudding with nuts.",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/payasam.jpg"
+    },
+    {
+      "id": "unniyappam",
+      "name": "Unniyappam",
+      "category": "Desserts",
+      "dietary": "veg",
+      "price_gbp": 3.8,
+      "description": "Jaggery-rice fritters (Kerala).",
+      "tags": [
+        "veg"
+      ],
+      "image": "assets/img/menu/uniyappam.jpg"
+    },
+    {
+      "id": "mysore-pak",
+      "name": "Mysore Pak",
+      "category": "Desserts",
+      "dietary": "veg",
+      "price_gbp": 3.6,
+      "description": "Gram flour, ghee & sugar fudge.",
+      "tags": [
+        "bestseller",
+        "veg"
+      ],
+      "image": "assets/img/menu/mysore_pak.jpg"
+    }
+  ]
+}
