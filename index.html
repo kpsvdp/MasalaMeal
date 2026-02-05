@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MasalaMeal • South Indian Restaurant</title>
+  <meta name="description" content="MasalaMeal — South Indian menu, online orders, dosas, idlis, biryanis, filter coffee and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-stone-50 text-stone-900 font-[Inter]">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-flex h-10 w-10 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-400 items-center justify-center text-white font-extrabold">MM</span>
+        <div>
+          <h1 class="text-xl font-extrabold leading-tight">MasalaMeal</h1>
+          <p class="text-xs text-stone-600 -mt-1">Authentic South Indian Flavours</p>
+        </div>
+      </a>
+      <nav class="ms-6 hidden md:flex gap-5 text-sm text-stone-700">
+        <a href="#menu" class="hover:text-stone-900">Menu</a>
+        <a href="#about" class="hover:text-stone-900">About</a>
+        <a href="#order" class="hover:text-stone-900">Order</a>
+        <a href="#contact" class="hover:text-stone-900">Contact</a>
+      </nav>
+      <div class="ms-auto flex items-center gap-3">
+        <div class="relative hidden sm:block">
+          <input id="search" class="rounded-xl border border-stone-300 px-3 py-2 text-sm w-72 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Search dosa, idli, biryani..." />
+          <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-stone-500">⌘K</span>
+        </div>
+        <button id="cartBtn" class="relative rounded-xl px-3 py-2 border border-stone-300 hover:border-stone-400">
+          Cart <span id="cartCount" class="ml-2 inline-block text-xs bg-orange-600 text-white rounded-full px-2 py-0.5">0</span>
+        </button>
+        <a href="#order" class="rounded-xl px-3 py-2 bg-orange-600 text-white font-semibold hover:bg-orange-700">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-50 to-stone-50 border-b border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold leading-tight">South Indian, Served Right.</h2>
+        <p class="mt-3 text-stone-700 text-lg">Crisp dosas, fluffy idlis, homely meals and bold Chettinad flavours. Order online for pickup or delivery.</p>
+        <div class="mt-5 flex gap-3">
+          <a href="#menu" class="btn-outline">Browse Menu</a>
+          <a href="#order" class="btn-solid">Start Order</a>
+        </div>
+        <div class="mt-5 flex gap-4 text-sm text-stone-600">
+          <div>⏱️ 20–30 min</div>
+          <div>🚚 Free delivery over £25</div>
+          <div>⭐ Loved by locals</div>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-3 md:gap-4">
+        <div class="hero-card">Idli</div>
+        <div class="hero-card">Masala Dosa</div>
+        <div class="hero-card">Filter Coffee</div>
+        <div class="hero-card">Biryani</div>
+        <div class="hero-card">Vada</div>
+        <div class="hero-card">Meals</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Grid: Sidebar categories • Menu • Sticky Checkout -->
+  <main id="menu" class="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-[220px_minmax(0,1fr)_360px] gap-6">
+    <!-- Sidebar Categories -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <h3 class="text-sm font-semibold text-stone-500 mb-2">Categories</h3>
+        <div class="mb-3 flex gap-2 text-xs"><button id="fAll" class="px-2 py-1 border rounded">All</button><button id="fVeg" class="px-2 py-1 border rounded">Veg</button><button id="fNonVeg" class="px-2 py-1 border rounded">Non‑veg</button></div><nav id="sideNav" class="space-y-1"></nav>
+        <div class="mt-6 text-xs text-stone-500">Prices in <span id="currency"></span></div>
+      </div>
+    </aside>
+
+    <!-- Menu Sections -->
+    
+<section id="menuSections" class="space-y-8">
+  <section id="veg-section">
+    <h3 class="section-title">🥗 Veg</h3>
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 section-wrap">
+      
+        <div class="card">
+          <img src="images/idli_plain.jpg" alt="Idli (2 pcs)" class="dish-image">
+          <h4>Idli (2 pcs)</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Steamed rice cakes served with sambar & coconut chutney.</p>
+          <div class="price">£3.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/idli_ghee.jpg" alt="Ghee Idli" class="dish-image">
+          <h4>Ghee Idli</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Soft idlis drizzled with ghee; sambar & chutneys.</p>
+          <div class="price">£4.20</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/medu_vada.jpg" alt="Medu Vada (2 pcs)" class="dish-image">
+          <h4>Medu Vada (2 pcs)</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Crispy urad dal fritters with sambar & chutneys.</p>
+          <div class="price">£3.90</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/rava_upma.jpg" alt="Rava Upma" class="dish-image">
+          <h4>Rava Upma</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Semolina upma tempered with mustard & curry leaves.</p>
+          <div class="price">£4.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/pongal.jpg" alt="Ven Pongal" class="dish-image">
+          <h4>Ven Pongal</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Savory moong dal rice porridge, pepper & ghee.</p>
+          <div class="price">£4.90</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/kesari.jpg" alt="Kesari Bath" class="dish-image">
+          <h4>Kesari Bath</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Saffron semolina halwa.</p>
+          <div class="price">£3.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/uthappam_mixed.jpg" alt="Mixed Veg Uthappam" class="dish-image">
+          <h4>Mixed Veg Uthappam</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Thick dosa topped with onions, tomatoes & chilies.</p>
+          <div class="price">£5.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_plain.jpg" alt="Plain Dosa" class="dish-image">
+          <h4>Plain Dosa</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Crisp fermented rice-lentil crepe.</p>
+          <div class="price">£5.00</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_masala.jpg" alt="Masala Dosa" class="dish-image">
+          <h4>Masala Dosa</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Stuffed with spiced potato masala.</p>
+          <div class="price">£6.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_mysore.jpg" alt="Mysore Masala Dosa" class="dish-image">
+          <h4>Mysore Masala Dosa</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge spicy">🌶️ Spicy</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Chili-onion chutney smear + potato masala.</p>
+          <div class="price">£7.00</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_rava.jpg" alt="Rava Dosa" class="dish-image">
+          <h4>Rava Dosa</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Lacy semolina dosa with black pepper & cumin.</p>
+          <div class="price">£6.00</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_podi.jpg" alt="Podi Dosa" class="dish-image">
+          <h4>Podi Dosa</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge spicy">🌶️ Spicy</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Gunpowder-spiced podi & ghee.</p>
+          <div class="price">£6.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_set.jpg" alt="Set Dosa (3)" class="dish-image">
+          <h4>Set Dosa (3)</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Soft, thick dosas served as a set.</p>
+          <div class="price">£6.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/dosa_neer.jpg" alt="Neer Dosa" class="dish-image">
+          <h4>Neer Dosa</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Delicate Mangalorean rice crepes.</p>
+          <div class="price">£6.20</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/meals_south.jpg" alt="South Indian Meals" class="dish-image">
+          <h4>South Indian Meals</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span></div>
+          <p class="text-sm text-stone-600">Rice, sambar, rasam, poriyal, kootu, curd, papad & pickle.</p>
+          <div class="price">£9.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/curd_rice.jpg" alt="Curd Rice" class="dish-image">
+          <h4>Curd Rice</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Comforting tempered yogurt rice.</p>
+          <div class="price">£5.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/lemon_rice.jpg" alt="Lemon Rice" class="dish-image">
+          <h4>Lemon Rice</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Zesty lemon-tempered rice with peanuts.</p>
+          <div class="price">£5.90</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/tam_rice.jpg" alt="Tamarind Rice" class="dish-image">
+          <h4>Tamarind Rice</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Tangy puliyodarai with sesame & peanuts.</p>
+          <div class="price">£6.20</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/bisi_bele_bath.jpg" alt="Bisi Bele Bath" class="dish-image">
+          <h4>Bisi Bele Bath</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge spicy">🌶️ Spicy</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Karnataka-style lentil-rice stew.</p>
+          <div class="price">£7.20</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/sambar_rice.jpg" alt="Sambar Rice" class="dish-image">
+          <h4>Sambar Rice</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Veg & lentil stew over rice.</p>
+          <div class="price">£6.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/veg_kurma.jpg" alt="Vegetable Kurma" class="dish-image">
+          <h4>Vegetable Kurma</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Coconut-cashew based mixed veg curry.</p>
+          <div class="price">£7.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/paneer_chettinad.jpg" alt="Paneer Chettinad" class="dish-image">
+          <h4>Paneer Chettinad</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge spicy">🌶️ Spicy</span></div>
+          <p class="text-sm text-stone-600">Spicy Chettinad paneer gravy.</p>
+          <div class="price">£8.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/poriyal.jpg" alt="Seasonal Veg Poriyal" class="dish-image">
+          <h4>Seasonal Veg Poriyal</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Stir-fried veg, mustard, coconut.</p>
+          <div class="price">£5.20</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/rasam.jpg" alt="Tomato Pepper Rasam" class="dish-image">
+          <h4>Tomato Pepper Rasam</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Peppery, tangy broth.</p>
+          <div class="price">£4.00</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/sambar.jpg" alt="Sambar" class="dish-image">
+          <h4>Sambar</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Lentil & veg stew.</p>
+          <div class="price">£4.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/chutney_trio.jpg" alt="Chutney Trio" class="dish-image">
+          <h4>Chutney Trio</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Coconut, tomato, mint-coriander.</p>
+          <div class="price">£2.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/curd.jpg" alt="Set Curd" class="dish-image">
+          <h4>Set Curd</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">House-set yogurt.</p>
+          <div class="price">£2.00</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/papad.jpg" alt="Papad (2)" class="dish-image">
+          <h4>Papad (2)</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Fried papadums.</p>
+          <div class="price">£1.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/ghee.jpg" alt="Ghee Portion" class="dish-image">
+          <h4>Ghee Portion</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Golden clarified butter.</p>
+          <div class="price">£1.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/filter_coffee.jpg" alt="Filter Coffee" class="dish-image">
+          <h4>Filter Coffee</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span></div>
+          <p class="text-sm text-stone-600">Classic South Indian decoction coffee.</p>
+          <div class="price">£2.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/masala_chai.jpg" alt="Masala Chai" class="dish-image">
+          <h4>Masala Chai</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Spiced milk tea.</p>
+          <div class="price">£2.60</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/buttermilk.jpg" alt="Masala Buttermilk" class="dish-image">
+          <h4>Masala Buttermilk</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge gf">GF</span></div>
+          <p class="text-sm text-stone-600">Cooling spiced chaas.</p>
+          <div class="price">£2.20</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/rose_milk.jpg" alt="Rose Milk" class="dish-image">
+          <h4>Rose Milk</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Sweet chilled rose milk.</p>
+          <div class="price">£2.80</div>
+        </div>
+        
+    </div>
+  </section>
+  <section id="nonveg-section">
+    <h3 class="section-title">🍗 Non-Veg</h3>
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 section-wrap">
+      
+        <div class="card">
+          <img src="images/chicken_biryani.jpg" alt="Hyderabadi Chicken Biryani" class="dish-image">
+          <h4>Hyderabadi Chicken Biryani</h4>
+          <div class="badges"><span class="badge nonveg">🍗 Non-Veg</span> <span class="badge bestseller">⭐ Bestseller</span></div>
+          <p class="text-sm text-stone-600">Aromatic layered basmati & chicken.</p>
+          <div class="price">£9.90</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/mutton_biryani.jpg" alt="Mutton Biryani" class="dish-image">
+          <h4>Mutton Biryani</h4>
+          <div class="badges"><span class="badge nonveg">🍗 Non-Veg</span></div>
+          <p class="text-sm text-stone-600">Dum-cooked tender mutton biryani.</p>
+          <div class="price">£12.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/chettinad_chicken.jpg" alt="Chettinad Chicken Curry" class="dish-image">
+          <h4>Chettinad Chicken Curry</h4>
+          <div class="badges"><span class="badge nonveg">🍗 Non-Veg</span> <span class="badge spicy">🌶️ Spicy</span></div>
+          <p class="text-sm text-stone-600">Roasted spice blend, coconut, black pepper heat.</p>
+          <div class="price">£9.50</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/fish_curry.jpg" alt="Mangalorean Fish Curry" class="dish-image">
+          <h4>Mangalorean Fish Curry</h4>
+          <div class="badges"><span class="badge nonveg">🍗 Non-Veg</span> <span class="badge spicy">🌶️ Spicy</span></div>
+          <p class="text-sm text-stone-600">Coconut & red chili base, tangy.</p>
+          <div class="price">£10.50</div>
+        </div>
+        
+    </div>
+  </section>
+  <section id="desserts-section">
+    <h3 class="section-title">🍮 Desserts</h3>
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 section-wrap">
+      
+        <div class="card">
+          <img src="images/payasam.jpg" alt="Payasam (Semiya)" class="dish-image">
+          <h4>Payasam (Semiya)</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Vermicelli pudding with nuts.</p>
+          <div class="price">£3.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/uniyappam.jpg" alt="Unniyappam" class="dish-image">
+          <h4>Unniyappam</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span></div>
+          <p class="text-sm text-stone-600">Jaggery-rice fritters (Kerala).</p>
+          <div class="price">£3.80</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/mysore_pak.jpg" alt="Mysore Pak" class="dish-image">
+          <h4>Mysore Pak</h4>
+          <div class="badges"><span class="badge veg">🌱 Veg</span> <span class="badge bestseller">⭐ Bestseller</span></div>
+          <p class="text-sm text-stone-600">Gram flour, ghee & sugar fudge.</p>
+          <div class="price">£3.60</div>
+        </div>
+        
+    </div>
+  </section>
+</section>
+
+
+    <!-- Sticky Checkout -->
+    <aside id="order" class="lg:block">
+      <div class="sticky top-24">
+        <h3 class="text-xl font-bold">Your Order</h3>
+        <div id="cart" class="mt-3 space-y-3"></div>
+        <div id="summary" class="rounded-2xl border border-stone-200 p-3 text-sm"></div>
+        <form id="checkoutForm" class="mt-4 space-y-3">
+          <input name="name" class="field" placeholder="Full name" required />
+          <input name="phone" class="field" placeholder="Phone number" />
+          <textarea name="address" class="field" placeholder="Delivery address"></textarea>
+          <textarea name="notes" class="field" placeholder="Any notes?"></textarea>
+          <button class="w-full rounded-xl px-4 py-2 bg-orange-600 text-white font-semibold hover:bg-orange-700">Place Order</button>
+          <p id="orderStatus" class="text-sm text-stone-700"></p>
+        </form>
+      </div>
+    </aside>
+  </main>
+
+  <!-- About & Contact -->
+  <section id="about" class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+    <div class="rounded-3xl p-6 bg-white border border-stone-200">
+      <h3 class="text-2xl font-bold">About MasalaMeal</h3>
+      <p class="mt-2 text-stone-700">We celebrate the flavours of Tamil Nadu, Karnataka, Kerala & Andhra. Our batter is fermented slow, spices are ground fresh, and coffee is decocted the old way.</p>
+      <ul class="mt-4 text-stone-700 list-disc ms-5">
+        <li>Vegetarian & gluten‑free options</li>
+        <li>Free delivery over £25</li>
+        <li>Pickup available</li>
+      </ul>
+    </div>
+    <div id="contact" class="rounded-3xl p-6 bg-white border border-stone-200">
+      <h3 class="text-2xl font-bold">Contact</h3>
+      <p class="mt-2 text-stone-700">Questions or catering? We’re here to help.</p>
+      <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="rounded-xl border border-stone-200 p-3">
+          <div class="font-semibold">Hours</div>
+          <div class="text-stone-600">Mon–Sun: 10:00–22:00</div>
+        </div>
+        <div class="rounded-xl border border-stone-200 p-3">
+          <div class="font-semibold">Phone</div>
+          <div class="text-stone-600">01234 567890</div>
+        </div>
+        <div class="rounded-xl border border-stone-200 p-3">
+          <div class="font-semibold">Email</div>
+          <div class="text-stone-600">hello@masalameal.example</div>
+        </div>
+        <div class="rounded-xl border border-stone-200 p-3">
+          <div class="font-semibold">Address</div>
+          <div class="text-stone-600">123 Curry Lane, London</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-600">
+    © <span id="year"></span> MasalaMeal • Made with ♥ for South Indian food
+  </footer>
+
+  <script src="app.js"></script>
+<script id="menuData" type="application/json">{"restaurant": {"name": "MasalaMeal", "tagline": "Authentic South Indian Flavours • Fast, Fresh, Friendly", "currency": "£"}, "categories": {"Breakfast & Tiffin": [{"id": "idli_plain", "name": "Idli (2 pcs)", "description": "Steamed rice cakes served with sambar & coconut chutney.", "veg": true, "spicy": false, "bestseller": true, "price": 3.5, "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/idli_plain.svg", "calories": 220}, {"id": "idli_ghee", "name": "Ghee Idli", "description": "Soft idlis drizzled with ghee; sambar & chutneys.", "veg": true, "spicy": false, "bestseller": false, "price": 4.2, "gluten_free": true, "spice": 0, "allergens": ["dairy"], "image": "img/idli_ghee.svg", "calories": 280}, {"id": "medu_vada", "name": "Medu Vada (2 pcs)", "description": "Crispy urad dal fritters with sambar & chutneys.", "veg": true, "spicy": false, "bestseller": true, "price": 3.9, "gluten_free": true, "spice": 1, "allergens": ["none"], "image": "img/medu_vada.svg", "calories": 320}, {"id": "rava_upma", "name": "Rava Upma", "description": "Semolina upma tempered with mustard & curry leaves.", "veg": true, "spicy": false, "bestseller": false, "price": 4.5, "spice": 0, "allergens": ["gluten"], "image": "img/rava_upma.svg", "calories": 260}, {"id": "pongal", "name": "Ven Pongal", "description": "Savory moong dal rice porridge, pepper & ghee.", "veg": true, "spicy": false, "bestseller": false, "price": 4.9, "gluten_free": true, "spice": 0, "allergens": ["dairy"], "image": "img/pongal.svg", "calories": 350}, {"id": "kesari", "name": "Kesari Bath", "description": "Saffron semolina halwa.", "veg": true, "spicy": false, "bestseller": false, "price": 3.8, "spice": 0, "allergens": ["dairy", "nuts?", "gluten?"], "image": "img/kesari.svg", "calories": 300}, {"id": "uthappam_mixed", "name": "Mixed Veg Uthappam", "description": "Thick dosa topped with onions, tomatoes & chilies.", "veg": true, "spicy": false, "bestseller": false, "sizes": {"Regular": 5.5, "Large": 7.0}, "defaultSize": "Regular", "spice": 1, "allergens": ["none"], "image": "img/uthappam_mixed.svg", "calories": 320}], "Dosa Corner": [{"id": "dosa_plain", "name": "Plain Dosa", "description": "Crisp fermented rice-lentil crepe.", "veg": true, "spicy": false, "bestseller": true, "sizes": {"Regular": 5.0, "Ghee": 6.0}, "defaultSize": "Regular", "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/dosa_plain.svg", "calories": 240}, {"id": "dosa_masala", "name": "Masala Dosa", "description": "Stuffed with spiced potato masala.", "veg": true, "spicy": false, "bestseller": true, "sizes": {"Regular": 6.5, "Ghee": 7.5, "Cheese": 7.9}, "defaultSize": "Regular", "gluten_free": true, "spice": 1, "allergens": ["none"], "image": "img/dosa_masala.svg", "calories": 420}, {"id": "dosa_mysore", "name": "Mysore Masala Dosa", "description": "Chili-onion chutney smear + potato masala.", "veg": true, "spicy": true, "bestseller": false, "sizes": {"Regular": 7.0, "Ghee": 8.0}, "defaultSize": "Regular", "gluten_free": true, "spice": 2, "allergens": ["none"], "image": "img/dosa_mysore.svg", "calories": 460}, {"id": "dosa_rava", "name": "Rava Dosa", "description": "Lacy semolina dosa with black pepper & cumin.", "veg": true, "spicy": false, "bestseller": false, "sizes": {"Plain": 6.0, "Onion": 6.8}, "defaultSize": "Plain", "spice": 0, "allergens": ["gluten"], "image": "img/dosa_rava.svg", "calories": 300}, {"id": "dosa_podi", "name": "Podi Dosa", "description": "Gunpowder-spiced podi & ghee.", "veg": true, "spicy": true, "bestseller": false, "sizes": {"Regular": 6.8, "Ghee": 7.8}, "defaultSize": "Regular", "gluten_free": true, "spice": 2, "allergens": ["none"], "image": "img/dosa_podi.svg", "calories": 430}, {"id": "dosa_set", "name": "Set Dosa (3)", "description": "Soft, thick dosas served as a set.", "veg": true, "spicy": false, "bestseller": false, "price": 6.5, "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/dosa_set.svg", "calories": 380}, {"id": "dosa_neer", "name": "Neer Dosa", "description": "Delicate Mangalorean rice crepes.", "veg": true, "spicy": false, "bestseller": false, "price": 6.2, "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/dosa_neer.svg", "calories": 220}], "Rice & Meals": [{"id": "meals_south", "name": "South Indian Meals", "description": "Rice, sambar, rasam, poriyal, kootu, curd, papad & pickle.", "veg": true, "spicy": false, "bestseller": true, "sizes": {"Mini": 7.5, "Regular": 9.5}, "defaultSize": "Regular", "spice": 1, "allergens": ["dairy", "nuts?"], "image": "img/meals_south.svg", "calories": 700}, {"id": "curd_rice", "name": "Curd Rice", "description": "Comforting tempered yogurt rice.", "veg": true, "spicy": false, "bestseller": false, "price": 5.5, "gluten_free": true, "spice": 0, "allergens": ["dairy"], "image": "img/curd_rice.svg", "calories": 360}, {"id": "lemon_rice", "name": "Lemon Rice", "description": "Zesty lemon-tempered rice with peanuts.", "veg": true, "spicy": false, "bestseller": false, "price": 5.9, "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/lemon_rice.svg", "calories": 420}, {"id": "tam_rice", "name": "Tamarind Rice", "description": "Tangy puliyodarai with sesame & peanuts.", "veg": true, "spicy": false, "bestseller": false, "price": 6.2, "gluten_free": true, "spice": 1, "allergens": ["nuts?"], "image": "img/tam_rice.svg", "calories": 430}, {"id": "bisi_bele_bath", "name": "Bisi Bele Bath", "description": "Karnataka-style lentil-rice stew.", "veg": true, "spicy": true, "bestseller": false, "price": 7.2, "gluten_free": true, "spice": 2, "allergens": ["nuts?"], "image": "img/bisi_bele_bath.svg", "calories": 520}, {"id": "sambar_rice", "name": "Sambar Rice", "description": "Veg & lentil stew over rice.", "veg": true, "spicy": false, "bestseller": false, "price": 6.8, "gluten_free": true, "spice": 1, "allergens": ["none"], "image": "img/sambar_rice.svg", "calories": 480}, {"id": "chicken_biryani", "name": "Hyderabadi Chicken Biryani", "description": "Aromatic layered basmati & chicken.", "veg": false, "spicy": false, "bestseller": true, "sizes": {"Single": 9.9, "Family": 18.0}, "defaultSize": "Single", "spice": 1, "allergens": ["none"], "image": "img/chicken_biryani.svg", "calories": 780}, {"id": "mutton_biryani", "name": "Mutton Biryani", "description": "Dum-cooked tender mutton biryani.", "veg": false, "spicy": false, "bestseller": false, "sizes": {"Single": 12.5, "Family": 22.0}, "defaultSize": "Single", "spice": 1, "allergens": ["none"], "image": "img/mutton_biryani.svg", "calories": 860}], "Curries & Sides": [{"id": "chettinad_chicken", "name": "Chettinad Chicken Curry", "description": "Roasted spice blend, coconut, black pepper heat.", "veg": false, "spicy": true, "bestseller": false, "price": 9.5, "spice": 3, "allergens": ["none"], "image": "img/chettinad_chicken.svg", "calories": 520}, {"id": "fish_curry", "name": "Mangalorean Fish Curry", "description": "Coconut & red chili base, tangy.", "veg": false, "spicy": true, "bestseller": false, "price": 10.5, "spice": 2, "allergens": ["fish"], "image": "img/fish_curry.svg", "calories": 480}, {"id": "veg_kurma", "name": "Vegetable Kurma", "description": "Coconut-cashew based mixed veg curry.", "veg": true, "spicy": false, "bestseller": false, "price": 7.5, "spice": 1, "allergens": ["nuts?", "dairy"], "image": "img/veg_kurma.svg", "calories": 420}, {"id": "paneer_chettinad", "name": "Paneer Chettinad", "description": "Spicy Chettinad paneer gravy.", "veg": true, "spicy": true, "bestseller": false, "price": 8.5, "spice": 2, "allergens": ["dairy"], "image": "img/paneer_chettinad.svg", "calories": 540}, {"id": "poriyal", "name": "Seasonal Veg Poriyal", "description": "Stir-fried veg, mustard, coconut.", "veg": true, "spicy": false, "bestseller": false, "price": 5.2, "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/poriyal.svg", "calories": 180}, {"id": "rasam", "name": "Tomato Pepper Rasam", "description": "Peppery, tangy broth.", "veg": true, "spicy": false, "bestseller": false, "price": 4.0, "gluten_free": true, "spice": 2, "allergens": ["none"], "image": "img/rasam.svg", "calories": 60}, {"id": "sambar", "name": "Sambar", "description": "Lentil & veg stew.", "veg": true, "spicy": false, "bestseller": false, "price": 4.5, "gluten_free": true, "spice": 1, "allergens": ["none"], "image": "img/sambar.svg", "calories": 120}], "Chutneys & Extras": [{"id": "chutney_trio", "name": "Chutney Trio", "description": "Coconut, tomato, mint-coriander.", "veg": true, "spicy": false, "bestseller": false, "price": 2.5, "gluten_free": true, "spice": 1, "allergens": ["nuts?"], "image": "img/chutney_trio.svg", "calories": 90}, {"id": "curd", "name": "Set Curd", "description": "House-set yogurt.", "veg": true, "spicy": false, "bestseller": false, "price": 2.0, "gluten_free": true, "spice": 0, "allergens": ["dairy"], "image": "img/curd.svg", "calories": 100}, {"id": "papad", "name": "Papad (2)", "description": "Fried papadums.", "veg": true, "spicy": false, "bestseller": false, "price": 1.8, "gluten_free": true, "spice": 0, "allergens": ["none"], "image": "img/papad.svg", "calories": 80}, {"id": "ghee", "name": "Ghee Portion", "description": "Golden clarified butter.", "veg": true, "spicy": false, "bestseller": false, "price": 1.5, "gluten_free": true, "spice": 0, "allergens": ["dairy"], "image": "img/ghee.svg", "calories": 120}], "Beverages": [{"id": "filter_coffee", "name": "Filter Coffee", "description": "Classic South Indian decoction coffee.", "veg": true, "spicy": false, "bestseller": true, "sizes": {"Small": 2.2, "Regular": 2.8, "Large": 3.2}, "defaultSize": "Regular", "spice": 0, "allergens": ["dairy"], "image": "img/filter_coffee.svg", "calories": 90}, {"id": "masala_chai", "name": "Masala Chai", "description": "Spiced milk tea.", "veg": true, "spicy": false, "bestseller": false, "sizes": {"Small": 2.0, "Regular": 2.6, "Large": 3.0}, "defaultSize": "Regular", "spice": 0, "allergens": ["dairy"], "image": "img/masala_chai.svg", "calories": 110}, {"id": "buttermilk", "name": "Masala Buttermilk", "description": "Cooling spiced chaas.", "veg": true, "spicy": false, "bestseller": false, "price": 2.2, "gluten_free": true, "spice": 0, "allergens": ["dairy"], "image": "img/buttermilk.svg", "calories": 60}, {"id": "rose_milk", "name": "Rose Milk", "description": "Sweet chilled rose milk.", "veg": true, "spicy": false, "bestseller": false, "price": 2.8, "spice": 0, "allergens": ["dairy"], "image": "img/rose_milk.svg", "calories": 180}], "Sweets & Desserts": [{"id": "payasam", "name": "Payasam (Semiya)", "description": "Vermicelli pudding with nuts.", "veg": true, "spicy": false, "bestseller": false, "price": 3.8, "spice": 0, "allergens": ["dairy", "nuts?"], "image": "img/payasam.svg", "calories": 280}, {"id": "uniyappam", "name": "Unniyappam", "description": "Jaggery-rice fritters (Kerala).", "veg": true, "spicy": false, "bestseller": false, "price": 3.8, "spice": 0, "allergens": ["none"], "image": "img/uniyappam.svg", "calories": 260}, {"id": "mysore_pak", "name": "Mysore Pak", "description": "Gram flour, ghee & sugar fudge.", "veg": true, "spicy": false, "bestseller": true, "price": 3.6, "spice": 0, "allergens": ["dairy"], "image": "img/mysore_pak.svg", "calories": 430}]}}</script>
+</body>
+</html>
